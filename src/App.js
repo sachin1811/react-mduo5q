@@ -56,8 +56,7 @@ export default function App() {
                     className="colContainer"
                     id={rowIndex + '' + colIndex}
                     onClick={() => !data[rowIndex][colIndex] && result === "Game going on..."?utility(rowIndex,colIndex):""}
-                    disabled={}
-                  >
+                   >
                     {data[rowIndex][colIndex]}
                   </div>
                 );
@@ -66,7 +65,7 @@ export default function App() {
           );
         })}
       </div>
-      <div><h3>{"Result: ",result}</h3></div>
+      <div><h3>{"Result: "+result}</h3></div>
       <div><button onClick={resetGame}>Reset Game</button></div>
     </div>
   );
